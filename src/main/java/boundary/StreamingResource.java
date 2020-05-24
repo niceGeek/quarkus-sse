@@ -20,7 +20,7 @@ public class StreamingResource {
     @GET
     @Produces(MediaType.SERVER_SENT_EVENTS)
     @Path("/{name}")
-    public Multi<String> greeting(@PathParam String name) {
+    public Multi<String> greeting(@PathParam("name") String name) {
         return vertx.periodicStream(2000).toMulti()
                 .map(l -> String.format("Hello %s! (%s)%n", name, new Date()));
     }
