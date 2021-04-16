@@ -15,7 +15,8 @@ pipeline {
             git 'https://github.com/niceGeek/quarkus-sse.git'
 
             // Run Maven on a Unix agent.
-            bat "./mvnw -Dmaven.test.failure.ignore=true clean package"
+            //sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
+            bat "mvn clean verify"
 
             // To run Maven on a Windows agent, use
             // bat "mvn -Dmaven.test.failure.ignore=true clean package"
