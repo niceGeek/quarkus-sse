@@ -1,6 +1,5 @@
 pipeline {
    agent any
-
 //    environment {
 //        // use your actual issuer URL here and NOT the placeholder {yourOktaDomain}
 //        OKTA_OAUTH2_ISSUER           = '{yourOktaDomain}/oauth2/default'
