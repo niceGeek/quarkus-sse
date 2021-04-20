@@ -31,13 +31,17 @@ pipeline {
       }
 
       stage('Run all tests') {
-      steps {
-                  // Get some code from a GitHub repository
-                  git 'https://github.com/niceGeek/quarkus-sse.git'
+          steps {
+                      // Get some code from a GitHub repository
+                      git 'https://github.com/niceGeek/quarkus-sse.git'
 
-                  // Run unit and integration tests.
-                  bat "mvn clean verify"
-               }
+                      // Run unit and integration tests.
+                      bat "mvn clean verify"
+                   }
       }
+
+       stage('Deploy') {
+              echo "Deployment should happen in this stage!"
+            }
    }
 }
