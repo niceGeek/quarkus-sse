@@ -40,8 +40,11 @@ pipeline {
                    }
       }
 
-//        stage('Deploy') {
-//               echo "Deployment should happen in this stage!"
-//             }
+       stage('Deploy') {
+        steps {
+            echo "Deployment should happen in this stage!"
+        }
+
+            }
    }
 }
